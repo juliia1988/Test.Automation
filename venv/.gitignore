@@ -1,0 +1,5 @@
+Lerninind Python/
+.pytest_cache/
+allure_results/
+venv/
+Workbook/
