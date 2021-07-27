@@ -10,8 +10,12 @@ node {
             sh 'pipenv install'
         }
 
-        stage("Test"){
+        stage('Test') {
             sh 'pipenv run pytest tests -sv --alluredir=allure_results'
+        }
+
+        stage('Test') {
+            sh 'pipenv run pytest blob-quickstart-v12 -sv --alluredir=allure_results'
         }
 
         stage("Report"){
@@ -21,7 +25,7 @@ node {
                 jdk: '',
                 properties: [],
                 reportBuildPolicy: 'ALWAYS',
-                results: [[path: 'allure-results']]
+                results: [[path: 'C:\Users\Yulia\PycharmProjects\python_api_testing\allure_results']]
                 ])
                 }
             }
