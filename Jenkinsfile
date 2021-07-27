@@ -25,7 +25,7 @@ node {
                 jdk: '',
                 properties: [],
                 reportBuildPolicy: 'ALWAYS',
-                results: [[path: 'C:\Users\Yulia\PycharmProjects\python_api_testing\allure_results']]
+                results: [[path: 'allure_results']]
                 ])
                 }
             }
