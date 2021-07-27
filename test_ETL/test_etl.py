@@ -42,7 +42,9 @@ def test_update_csv_with_new_operator():
 
 test_update_csv_with_new_operator()
 
-@allure.step('Upload local file to Azure dev storage Landing container')
+@allure.feature('Check ETL function')
+@allure.story('Upload local file to Azure dev storage Landing container')
+@allure.step()
 def test_upload_updated_csv_to_blob():
     time.sleep(10)
     try:
@@ -64,8 +66,9 @@ def test_upload_updated_csv_to_blob():
 
 test_upload_updated_csv_to_blob()
 
-@allure.story('Check updated info')
-@allure.step('Check Operator')
+@allure.feature('Check ETL function')
+@allure.story('Check Operator')
+@allure.step()
 def test_data_base_check_operator():
     time.sleep(10)
     cursor.execute("select Operator from WellSummary where numAPI = '42-003-48292-00'")
@@ -80,7 +83,9 @@ test_data_base_check_operator()
 
 #Check for TreatmentSummary table:
 
-@allure.step('Check Sales Order')
+@allure.feature('Check ETL function')
+@allure.story('Check Sales Order')
+@allure.step()
 def test_check_new_salesOrderNumber():
      time.sleep(10)
      cursor.execute("select SalesOrdernumber from TreatmentSummary where WellSummaryId = '5C03FAE2-53D8-4134-886B-BFCDAC061047' and TreatmentNumber = '2'")
@@ -96,7 +101,9 @@ test_check_new_salesOrderNumber()
 
 #Check for TimeHistory table:
 
-@allure.step('Check FluidDescription')
+@allure.feature('Check ETL function')
+@allure.story('Check FluidDescription')
+@allure.step()
 def test_check_new_fluidDescription():
     time.sleep(10)
     cursor.execute(
