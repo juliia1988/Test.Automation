@@ -11,7 +11,7 @@ fluidDescription = str(uuid.uuid4())
 
 @allure.feature('Check ETL function')
 @allure.story('Update CSV file')
-@allure.step('Update local file')
+@allure.step
 def test_update_csv_with_new_operator():
     try:
         # Открываем файл только для чтения
@@ -44,7 +44,7 @@ test_update_csv_with_new_operator()
 
 @allure.feature('Check ETL function')
 @allure.story('Upload local file to Azure dev storage Landing container')
-@allure.step()
+@allure.step
 def test_upload_updated_csv_to_blob():
     time.sleep(10)
     try:
@@ -68,7 +68,7 @@ test_upload_updated_csv_to_blob()
 
 @allure.feature('Check ETL function')
 @allure.story('Check Operator')
-@allure.step()
+@allure.step
 def test_data_base_check_operator():
     time.sleep(10)
     cursor.execute("select Operator from WellSummary where numAPI = '42-003-48292-00'")
@@ -85,7 +85,7 @@ test_data_base_check_operator()
 
 @allure.feature('Check ETL function')
 @allure.story('Check Sales Order')
-@allure.step()
+@allure.step
 def test_check_new_salesOrderNumber():
      time.sleep(10)
      cursor.execute("select SalesOrdernumber from TreatmentSummary where WellSummaryId = '5C03FAE2-53D8-4134-886B-BFCDAC061047' and TreatmentNumber = '2'")
@@ -103,7 +103,7 @@ test_check_new_salesOrderNumber()
 
 @allure.feature('Check ETL function')
 @allure.story('Check FluidDescription')
-@allure.step()
+@allure.step
 def test_check_new_fluidDescription():
     time.sleep(10)
     cursor.execute(
