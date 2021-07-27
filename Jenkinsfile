@@ -23,6 +23,4 @@ node {
          results: [[path: 'allure_results']]
          ])
 }
-    }
-
 }
