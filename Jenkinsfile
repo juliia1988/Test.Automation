@@ -11,11 +11,11 @@ node {
         }
 
         stage('Test') {
-            sh 'pipenv run pytest tests -sv --alluredir=allure_results'
+            sh 'pipenv run pytest test_APIs -sv --alluredir=allure_results'
         }
 
         stage('Test') {
-            sh 'pipenv run pytest blob-quickstart-v12 -sv --alluredir=allure_results'
+            sh 'pipenv run pytest test_ETL -sv --alluredir=allure_results'
         }
 
         stage("Report"){

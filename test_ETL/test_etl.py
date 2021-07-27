@@ -1,7 +1,7 @@
 import uuid
 import time
-from settings_for_etl import blob_service_client, local_file_name, upload_file_path
-from settings_for_etl import cursor
+from test_ETL.settings_for_etl import blob_service_client, local_file_name, upload_file_path
+from test_ETL.settings_for_etl import cursor
 import allure
 operator = str(uuid.uuid4())
 salesOrderNumber = str(uuid.uuid4())
