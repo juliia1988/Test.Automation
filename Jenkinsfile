@@ -11,7 +11,7 @@ node {
     }
 
     stage("Test"){
-        sh 'pipenv run pytest test -sv --alluredir=allure_results'
+        sh 'pipenv run pytest tests -sv --alluredir=allure_results'
     }
 
     stage("Report"){
