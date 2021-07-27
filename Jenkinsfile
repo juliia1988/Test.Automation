@@ -2,7 +2,7 @@ node {
 
     stage("Checkout repo"){
         git branch: 'master',
-        credentialsId: '428de68c-b0a5-460b-a6e2-90468ccfe967',
+        credentialsId: '7957cba0-a39c-4aae-8619-26b66d94da30',
         url: 'https://github.com/juliia1988/FracVault_autotests.git'
     }
 
