@@ -10,7 +10,19 @@ node {
         sh 'pipenv install'
     }
 
-    stage('Test'){
+    stage("Test"){
         sh 'pipenv run pytest test -sv --alluredir=allure_results'
     }
+
+    stage("Report"){
+        allure([
+         includeProperties: false,
+         jdk: '',
+         properties: [],
+         reportBuildPolicy: 'ALWAYS',
+         results: [[path: 'allure_results']]
+         ])
+}
+    }
+
 }
