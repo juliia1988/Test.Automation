@@ -8,7 +8,6 @@ pytest = "*"
 requests = "*"
 pyodbc = "*"
 azure-storage-blob = "*"
-cursor = "*"
 allure-pytest = "*"
 
 [dev-packages]
