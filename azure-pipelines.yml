@@ -9,7 +9,7 @@ trigger:
     versionSpec: '3.x'
     addToPath: true
     architecture: 'x64'
-- main
+- master
 
 pool:
   vmImage: ubuntu-latest
