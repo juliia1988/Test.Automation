@@ -1,7 +1,7 @@
 import os
 import uuid
 import json
-from stage_settings_db_vs_azure import blob_service_client, cursor
+from STAGE_test_PJR.stage_settings_db_vs_azure import blob_service_client, cursor
 
 local_path = "./stage_data"
 local_file_name = str("autotest") + ".json"

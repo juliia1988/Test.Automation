@@ -12,7 +12,7 @@ cursor = cnxn.cursor()
 stg_connect_str = os.getenv('STAGE_AZURE_STORAGE_CONNECTION_STRING')
 blob_service_client = BlobServiceClient.from_connection_string(stg_connect_str)
 
-local_path = "./stage_data"
+local_path = "stage_data"
 local_file_name = str("autotest_pjr") + ".json"
 upload_file_path = os.path.join(local_path, local_file_name)
 
