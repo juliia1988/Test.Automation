@@ -28,15 +28,15 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
+  
 
-- pytest:
-  stage: test
-  script:
-    - pytest --junitxml=report.xml
-  artifacts:
-    when: always
-    reports:
-      junit: report.xml
+- script:
+  - pytest --junitxml=report.xml
+artifacts:
+  when: always
+  reports:
+    junit: report.xml  
+
 
 - task: PublishTestResults@2
   inputs:
