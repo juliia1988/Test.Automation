@@ -30,12 +30,12 @@ steps:
   displayName: 'pytest'
   
 
-- script:
-  - pytest --junitxml=report.xml
-artifacts:
-  when: always
-  reports:
-    junit: report.xml  
+- script: |
+    pytest --junitxml=report.xml
+  artifacts:
+    when: always
+    reports:
+      junit: report.xml
 
 
 - task: PublishTestResults@2
