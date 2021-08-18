@@ -28,3 +28,11 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
+    - task: AllureGenerate@1
+      inputs:
+        resultsDir: 'allure-results'
+        targetDir: 'allure-report/$(Build.BuildNumber)'
