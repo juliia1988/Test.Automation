@@ -39,3 +39,8 @@ steps:
     buildConfiguration:  
   continueOnError: true
   enabled: false       
+
+- task: AllureGenerate@1
+  inputs:
+    resultsDir: 'allure-results'
+    targetDir: 'allure-report/$(Build.BuildNumber)'
