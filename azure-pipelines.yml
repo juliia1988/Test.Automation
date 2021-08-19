@@ -36,4 +36,6 @@ steps:
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/TEST-*.xml'
-    buildConfiguration:       
+    buildConfiguration:  
+  continueOnError: true
+  enabled: false       
