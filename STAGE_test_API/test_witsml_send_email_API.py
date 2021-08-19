@@ -10,9 +10,9 @@ new_interval = row[1]
 new_operator = row[2]
 print(new_numAPI,new_interval,new_operator)
 
-url = 'https://witsmlapitrigger.azurewebsites.net/api/GenerateWitsmlAndSendEmail'
+url = 'https://netwitsmlgenerationapitest.azurewebsites.net/api/GenerateWitsmlAndSendEmail'
 email = "yuliia.sokolova3@halliburton.com"
-code = 'c4QwXXPhK/AzgTjpyal8DUZ/P9qtIEbLzXQtTKOXrNmxl/POmiuwkA=='
+code = 'N8HkjnyNYkn%$hYiHn%23@N51239'
 headers = {'content-type': 'application/json'}
 data = {"numAPI": [new_numAPI], "Intervals": [str(new_interval)], "email": email, "operator": [new_operator], "WITSMLObjects": ["ALL"], "ExcludeElements": [[""]]}
 params = {'code': code}
