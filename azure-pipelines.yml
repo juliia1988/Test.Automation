@@ -36,9 +36,7 @@ steps:
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/TEST-*.xml'
-    buildConfiguration:  
-  continueOnError: true
-  enabled: false       
+    failTaskOnFailedTests: false
 
 - task: AllureGenerate@1
   inputs:
