@@ -42,4 +42,5 @@ steps:
 
 - task: AllureGenerate@1
   inputs:
-    resultsDir: file(“target/allure-results”)
+    targetDir: targer/allure-results
+    resultsDir: target/allure-results
