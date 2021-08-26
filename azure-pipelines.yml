@@ -42,5 +42,5 @@ steps:
 
 - task: AllureGenerate@1
   inputs:
-    resultsDir: 'allure-results'
+    resultsDir: '**/Test.Automation/allure-results'
     targetDir: 'allure-report/$(Build.BuildNumber)'
