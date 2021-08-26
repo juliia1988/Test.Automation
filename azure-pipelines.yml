@@ -32,13 +32,9 @@ steps:
 - script: |
     pytest --junitxml=report.xml
 
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'XUnit'
-    testResultsFiles: '**/allure-*.xml'
-    searchFolder: '$(System.DefaultWorkingDirectory)/allure-results'
-    testRunTitle: 'allure test run'
+- script: |
+    pytest --alluredir=allure-results
+
 - task: AllureGenerate@1
   inputs:
-      resultsDir: allure-results
-      targetDir: allure-report/$(Build.BuildNumber)
+      resultsDir: build/allure-results
