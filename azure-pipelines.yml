@@ -36,4 +36,6 @@ steps:
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/TEST-*.xml'
+    searchFolder: '$(System.DefaultWorkingDirectory)/Test.Automation/test_results_junit'
     failTaskOnFailedTests: false
+    publishRunAttachments: true
