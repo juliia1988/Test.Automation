@@ -39,3 +39,8 @@ steps:
     searchFolder: '$(System.DefaultWorkingDirectory)/Test.Automation/test_results_junit'
     failTaskOnFailedTests: false
     publishRunAttachments: true
+
+- task: AllureGenerate@1
+  inputs:
+    resultsDir: 'allure-results'
+    targetDir: 'allure-report/$(Build.BuildNumber)'
