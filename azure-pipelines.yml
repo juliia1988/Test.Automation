@@ -32,15 +32,7 @@ steps:
 - script: |
     pytest --junitxml=report.xml
 
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'JUnit'
-    testResultsFiles: '**/TEST-*.xml'
-    searchFolder: '$(System.DefaultWorkingDirectory)/Test.Automation/test_results_junit'
-    failTaskOnFailedTests: false
-    publishRunAttachments: true
 
 - task: AllureGenerate@1
   inputs:
-    targetDir: targer/allure-results
-    resultsDir: target/allure-results
+      resultsDir: target/allure-results
