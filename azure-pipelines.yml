@@ -32,7 +32,11 @@ steps:
 - script: |
     pytest --junitxml=report.xml
 
+- script: |
+    py.test --alluredir=allure-results
+    allure serve allure-results
 
 - task: AllureGenerate@1
   inputs:
-      resultsDir: target/allure-results
+      resultsDir: allure-results
+      targetDir: allure-report/$(Build.BuildNumber)
