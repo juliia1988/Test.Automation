@@ -31,3 +31,8 @@ steps:
   
 - script: |
     pytest --junitxml=report.xml
+
+- task: AllureGenerate@1
+  inputs:
+    resultsDir: 'Test.Automation/allure-results'
+    targetDir: 'Test.Automation/allure-report/$(Build.BuildNumber)'
