@@ -1,0 +1,5 @@
+
+Uploading to Azure Storage as blob:
+	autotest_46cac9c4-d16b-41a6-adef-c9859d7f078b.json
+Exception:
+[Errno 2] No such file or directory: './stage_data\\autotest.json'

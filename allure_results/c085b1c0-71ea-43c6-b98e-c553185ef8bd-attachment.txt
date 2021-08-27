@@ -1,0 +1,1 @@
+b'Invalid NumApi = 05-123-4815. Allowed formats: SS-CCC-NNNNN or SS-CCC-NNNNN-BB or SS-CCC-NNNNN-BB-BB\nwhere SS - state code, CCC - county code, NNNNN - well number, BB - bore number'

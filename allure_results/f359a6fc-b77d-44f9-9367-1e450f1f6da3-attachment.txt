@@ -1,0 +1,16 @@
+Exception:
+[Errno 2] No such file or directory: './stage_data\\autotest.json'
+Success update file with:_
+
+New file name:_
+	autotest_46cac9c4-d16b-41a6-adef-c9859d7f078b.json
+
+New numAPI:_
+	42-003-48274-00
+
+New operator:_
+	COG Operating LLC
+
+New treatmentNumber:_
+	
+40

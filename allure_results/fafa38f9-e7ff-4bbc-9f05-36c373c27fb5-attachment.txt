@@ -1,0 +1,12 @@
+
+Uploading to Azure Storage as blob:
+	Change_Operator_name.csv
+
+Operator:_
+	d6d6f13b-35e2-4a4b-ac83-1c8f559b9a8f
+
+Sales Order:_
+	37f4c1cc-0b84-41ab-8726-28db3d0c8c25
+
+Fluid Description:_
+	1c6317a0-3002-460f-a1aa-16b0969fecde
