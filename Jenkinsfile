@@ -11,20 +11,15 @@ node {
         }
 
         stage('Test STAGE APIs') {
-            sh 'pipenv run pytest test_CustomerDataAPI -sv --alluredir=allure_results'
-        }
-
-        stage('Test STAGE WITSML') {
-            sh 'pipenv run pytest test_witsml -sv --alluredir=allure_results'
-            sh 'pipenv run pytest test_witsml_send_email -sv --alluredir=allure_results'
+            sh 'pipenv run pytest STAGE_test_API -sv --alluredir=allure_results'
         }
 
         stage('Test STAGE ETL') {
-            sh 'pipenv run pytest test_etl -sv --alluredir=allure_results'
+            sh 'pipenv run pytest STAGE_test_ETL -sv --alluredir=allure_results'
         }
 
         stage('Test STAGE PJR') {
-            sh 'pipenv run pytest test_stage_request_pjr -sv --alluredir=allure_results'
+            sh 'pipenv run pytest STAGE_test_PJR -sv --alluredir=allure_results'
         }
 
         stage("Report"){
