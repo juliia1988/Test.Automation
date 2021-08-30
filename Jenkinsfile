@@ -20,7 +20,7 @@ node {
         }
 
         stage('Test STAGE ETL') {
-            sh 'pipenv run pytest test_ETL -sv --alluredir=allure_results'
+            sh 'pipenv run pytest test_etl -sv --alluredir=allure_results'
         }
 
         stage('Test STAGE PJR') {
